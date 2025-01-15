@@ -8,6 +8,9 @@ plugins {
     id "org.graceframework.grace-gsp"
 }
 
+ext['spring-framework.version'] = '6.0.23'
+ext['hibernate.version'] = '6.2.32.Final'
+
 group "grace.guides"
 
 repositories {
@@ -25,9 +28,11 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.graceframework:grace-core"
     implementation "org.springframework.boot:spring-boot-starter-actuator"
-    implementation "org.springframework.boot:spring-boot-starter-tomcat"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation "org.graceframework:grace-boot"
     implementation "org.graceframework:grace-logging"
+    implementation "org.graceframework:grace-plugin-core"
     implementation "org.graceframework:grace-plugin-codecs"
     implementation "org.graceframework:grace-plugin-controllers"
     implementation "org.graceframework:grace-plugin-databinding"
@@ -41,14 +46,15 @@ dependencies {
     implementation "org.graceframework:grace-plugin-url-mappings"
     implementation "org.graceframework.plugins:async"
     implementation "org.graceframework.plugins:cache"
-    implementation "org.graceframework.plugins:database-migration"
+    // implementation "org.graceframework.plugins:database-migration"
     implementation "org.graceframework.plugins:events"
     implementation "org.graceframework.plugins:fields"
     implementation "org.graceframework:grace-plugin-gsp"
-    implementation "org.graceframework.plugins:hibernate"
+    // implementation "org.graceframework.plugins:hibernate"
     implementation "org.graceframework.plugins:scaffolding"
+    // implementation 'org.flywaydb:flyway-core'
     profile "org.graceframework.profiles:web"
-    runtimeOnly "org.graceframework.plugins:asset-pipeline-plugin:6.0.1"
+    runtimeOnly "org.graceframework.plugins:asset-pipeline-plugin:6.1.1"
     runtimeOnly "com.h2database:h2"
     testImplementation "org.graceframework:grace-test-support"
     testImplementation "org.mockito:mockito-core"
