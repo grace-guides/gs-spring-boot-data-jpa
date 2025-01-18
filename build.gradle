@@ -8,9 +8,6 @@ plugins {
     id "org.graceframework.grace-gsp"
 }
 
-ext['spring-framework.version'] = '6.0.23'
-ext['hibernate.version'] = '6.2.32.Final'
-
 group "grace.guides"
 
 repositories {
@@ -54,7 +51,7 @@ dependencies {
     implementation "org.graceframework.plugins:scaffolding"
     implementation 'org.flywaydb:flyway-core'
     profile "org.graceframework.profiles:web"
-    runtimeOnly "org.graceframework.plugins:asset-pipeline-plugin:6.1.1"
+    runtimeOnly "org.graceframework.plugins:asset-pipeline-plugin:6.2.0"
     runtimeOnly "com.h2database:h2"
     testImplementation "org.graceframework:grace-test-support"
     testImplementation "org.mockito:mockito-core"
