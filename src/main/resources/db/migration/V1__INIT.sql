@@ -10,4 +10,5 @@ INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2022.2.8 released');
 INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.0.0 released');
 INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.0.1 released');
 INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.0.2 released');
-INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.1.0 is comming');
+INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.1.0 released');
+INSERT INTO POSTS(version, title) VALUES (0, 'Grace 2023.2.0 released');
