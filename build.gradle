@@ -8,7 +8,7 @@ plugins {
     id "org.graceframework.grace-gsp"
 }
 
-group "grace.guides"
+group = "grace.guides"
 
 repositories {
     mavenCentral()
@@ -21,17 +21,17 @@ configurations {
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     console "org.graceframework:grace-console"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-validation"
-    implementation "org.graceframework:grace-core"
-    implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa"
     implementation "org.graceframework:grace-boot"
+    implementation "org.graceframework:grace-core"
     implementation "org.graceframework:grace-logging"
-    implementation "org.graceframework:grace-plugin-core"
     implementation "org.graceframework:grace-plugin-codecs"
     implementation "org.graceframework:grace-plugin-controllers"
+    implementation "org.graceframework:grace-plugin-converters"
     implementation "org.graceframework:grace-plugin-databinding"
     // implementation "org.graceframework:grace-plugin-datasource"
     implementation "org.graceframework:grace-plugin-domain-class"
